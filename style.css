@@ -1,0 +1,583 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #fde4f2;
+    color: #111;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    min-width: 320px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 87%;
+    max-width: 1210px;
+
+    margin: auto;
+
+    padding-top: 38px;
+
+    display: grid;
+
+    grid-template-columns:
+        245px
+        1fr
+        90px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    cursor: pointer;
+}
+
+
+.logo-name {
+    font-family: "Caveat",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 58px;
+
+    color : #7d0921;
+
+    line-height: 0.75;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    transform: rotate(-2deg);
+}
+
+
+.logo-lastname {
+    margin-top: 5px;
+    margin-left: 2px;
+
+    font-family: "Caveat",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    color : #7d0921;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    display: flex;
+
+    justify-content: center;
+
+    gap: clamp(
+        55px,
+        8vw,
+        125px
+    );
+
+    padding-top: 23px;
+}
+
+
+.navbar a {
+    position: relative;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 400;
+}
+
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -5px;
+
+    height: 1px;
+
+    background: transparent;
+
+    transition: 0.2s;
+}
+
+
+.navbar a:hover::after {
+    background: #111;
+}
+
+
+/* =========================
+   HEADER ICONS
+========================= */
+
+.header-icons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 14px;
+
+    padding-top: 13px;
+}
+
+
+.header-icons a {
+    width: 22px;
+    height: 22px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #111;
+}
+
+
+.header-icons svg {
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+}
+
+
+.header-icons .filled {
+    fill: currentColor;
+
+    stroke: none;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home-section {
+    height: 1px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+
+    width: 70%;
+    max-width: 900px;
+
+    margin: 100px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        415px
+        1fr;
+
+    gap: 63px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-container {
+
+    width: 415px;
+
+    height: 585px;
+
+    overflow: hidden;
+}
+
+
+.image-container img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+}
+
+
+/* =========================
+   ABOUT CONTENT
+========================= */
+
+.about-content {
+
+    padding-top: 54px;
+}
+
+
+.about-content h1 {
+
+    margin-bottom: 60px;
+
+    font-family:
+        "Caveat",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 52px;
+
+    font-weight: 500;
+
+    color : #7d0921;
+
+    line-height: 1;
+}
+
+
+.about-text {
+
+    max-width: 385px;
+}
+
+
+.about-text p {
+
+    margin-bottom: 23px;
+
+    color: #111;
+
+    font-size: 11.5px;
+
+    font-weight: 300;
+
+    line-height: 1.42;
+}
+
+
+/* Contact */
+
+.contact-link {
+
+    color: #222;
+
+    font-size: 11.5px;
+
+    text-decoration: underline;
+
+    text-underline-offset: 2px;
+}
+
+
+/* =========================
+   OTHER SECTIONS
+========================= */
+
+.empty-section {
+
+    min-height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    margin-top: 75px;
+
+    padding-bottom: 52px;
+
+    text-align: center;
+
+    color: #999;
+}
+
+
+footer p {
+
+    margin-bottom: 16px;
+
+    font-size: 10px;
+
+    font-weight: 300;
+}
+
+
+.social-icons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+.social-icons a {
+
+    width: 18px;
+    height: 18px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #050505;
+
+    color: white;
+
+    border-radius: 2px;
+
+    text-decoration: none;
+
+    font-family: Arial;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.social-icons a:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        width: 90%;
+
+        grid-template-columns:
+            210px
+            1fr
+            70px;
+    }
+
+
+    .navbar {
+        gap: 45px;
+    }
+
+
+    .about-section {
+
+        width: 82%;
+
+        grid-template-columns:
+            minmax(330px, 415px)
+            1fr;
+
+        gap: 45px;
+    }
+
+
+    .image-container {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .header {
+
+        width: 88%;
+
+        grid-template-columns:
+            1fr
+            auto;
+
+        row-gap: 25px;
+    }
+
+
+    .navbar {
+
+        grid-column: 1 / -1;
+
+        grid-row: 2;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        gap: 35px;
+
+        padding-bottom: 8px;
+    }
+
+
+    .header-icons {
+        padding-top: 8px;
+    }
+
+
+    .about-section {
+
+        width: 88%;
+
+        margin-top: 65px;
+
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+    }
+
+
+    .image-container {
+
+        width: min(
+            100%,
+            500px
+        );
+
+        height: auto;
+
+        aspect-ratio:
+            417 / 586;
+
+        margin: auto;
+    }
+
+
+    .about-content {
+        padding-top: 0;
+    }
+
+
+    .about-content h1 {
+
+        margin-bottom: 35px;
+    }
+
+
+    .about-text {
+        max-width: 520px;
+    }
+
+
+    footer {
+        margin-top: 55px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .header {
+
+        width: 86%;
+
+        padding-top: 24px;
+    }
+
+
+    .logo-name {
+        font-size: 46px;
+    }
+
+
+    .logo-lastname {
+        font-size: 25px;
+    }
+
+
+    .navbar {
+        gap: 24px;
+    }
+
+
+    .navbar a {
+        font-size: 10px;
+    }
+
+
+    .about-section {
+
+        width: 86%;
+
+        margin-top: 48px;
+    }
+
+
+    .about-content h1 {
+        font-size: 45px;
+    }
+
+
+    .about-text p,
+    .contact-link {
+        font-size: 11px;
+    }
+
+
+    footer {
+        padding-bottom: 30px;
+    }
+}
