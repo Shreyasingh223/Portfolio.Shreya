@@ -4,21 +4,30 @@ console.log("Script loaded successfully!");
 // Smooth navigation
 // ================================
 
-const coords = {x: 0, y: 0};
+// 
+
+const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
-const colors = ["#7D0921", "linear-gradient(nulldeg,rgba(125, 9, 33, 1) 0%, rgba(250, 222, 247, 1) 100%)"];
+const colors = [
+    "#7D0921",
+    "linear-gradient(90deg, rgba(125, 9, 33, 1) 0%, rgba(250, 222, 247, 1) 100%)"
+];
 
 circles.forEach(function (circle, index) {
     circle.x = 0;
     circle.y = 0;
-    circle.style.backgroundColor = colors[index % colors.length];
+
+    if (colors[index % colors.length].includes("gradient")) {
+        circle.style.backgroundImage = colors[index % colors.length];
+    } else {
+        circle.style.backgroundColor = colors[index % colors.length];
+    }
 });
 
-window.addEventListener("mousemove", function(e) {
+window.addEventListener("pointermove", function (e) {
     coords.x = e.clientX;
     coords.y = e.clientY;
-
 });
 
 function animCircles() {
@@ -29,12 +38,14 @@ function animCircles() {
         circle.style.left = x - 12 + "px";
         circle.style.top = y - 12 + "px";
 
-        circle.style.scale = (circles.length - index) / circles.length;
+        circle.style.scale =
+            (circles.length - index) / circles.length;
 
         circle.x = x;
         circle.y = y;
 
         const nextCircle = circles[index + 1] || circles[0];
+
         x += (nextCircle.x - x) * 0.3;
         y += (nextCircle.y - y) * 0.3;
     });
