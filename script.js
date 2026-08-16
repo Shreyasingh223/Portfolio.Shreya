@@ -1,60 +1,5 @@
 console.log("Script loaded successfully!");
 
-// ================================
-// Smooth navigation
-// ================================
-
-// 
-
-// const coords = { x: 0, y: 0 };
-// const circles = document.querySelectorAll(".circle");
-
-// const colors = [
-//     "#7D0921",
-//     "linear-gradient(90deg, rgba(125, 9, 33, 1) 0%, rgba(250, 222, 247, 1) 100%)"
-// ];
-
-// circles.forEach(function (circle, index) {
-//     circle.x = 0;
-//     circle.y = 0;
-
-//     if (colors[index % colors.length].includes("gradient")) {
-//         circle.style.backgroundImage = colors[index % colors.length];
-//     } else {
-//         circle.style.backgroundColor = colors[index % colors.length];
-//     }
-// });
-
-// window.addEventListener("pointermove", function (e) {
-//     coords.x = e.clientX;
-//     coords.y = e.clientY;
-// });
-
-// function animCircles() {
-//     let x = coords.x;
-//     let y = coords.y;
-
-//     circles.forEach(function (circle, index) {
-//         circle.style.left = x - 12 + "px";
-//         circle.style.top = y - 12 + "px";
-
-//         circle.style.scale =
-//             (circles.length - index) / circles.length;
-
-//         circle.x = x;
-//         circle.y = y;
-
-//         const nextCircle = circles[index + 1] || circles[0];
-
-//         x += (nextCircle.x - x) * 0.3;
-//         y += (nextCircle.y - y) * 0.3;
-//     });
-
-//     requestAnimationFrame(animCircles);
-// }
-
-// animCircles();
-
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
@@ -108,36 +53,10 @@ function animCircles() {
 animCircles();
 
 
-const navigationLinks =
-    document.querySelectorAll(".navbar a");
+const navToggle = document.getElementById("nav-toggle");
+const navLinks = document.getElementById("nav-links");
 
-
-navigationLinks.forEach(function (link) {
-
-    link.addEventListener("click", function (event) {
-
-        const targetId =
-            this.getAttribute("href");
-
-        if (
-            targetId &&
-            targetId.startsWith("#")
-        ) {
-
-            event.preventDefault();
-
-            const target =
-                document.querySelector(targetId);
-
-            if (target) {
-
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-            }
-        }
-
-    });
-
+navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("active");
+    navLinks.classList.toggle("active");
 });
