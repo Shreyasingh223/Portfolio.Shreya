@@ -145,8 +145,14 @@ body {
   font-family: "special elite", cursive;
   text-decoration: underline;
   padding: 6px 8px;
-  border: 1px solid #7d0921;
+  border: 2px solid #7d0921;
   text-underline-offset: 2px;
+}
+
+.contact-link:hover {
+  background-color: #ffffff;
+  color: #7d0921;
+  transition: 0.5s ease;
 }
 
 .empty-section {
