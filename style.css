@@ -100,7 +100,7 @@ body {
 .hello {
   font-family: "Special Elite", cursive;
   font-size: 28px;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 
 .hero h1 {
@@ -283,7 +283,7 @@ body {
 
   .about-section {
     grid-template-columns: 1fr;
-    gap: 42px;
+    gap: 35px;
   }
 
   /* .image-container {
@@ -293,12 +293,12 @@ body {
     margin: auto;
   } */
 
-  .about-content h1 {
+  .about-content a {
     margin-bottom: 15px;
   }
 
   .about-text {
-    max-width: 520px;
+    max-width: 500px;
   }
 
   footer {
@@ -322,7 +322,7 @@ body {
 
   .about-section {
     width: 86%;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .about-content h1 {
@@ -428,20 +428,19 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 250px;
+    min-height: 200px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 20px;
+    padding: 30px 20px 0 20px;
   }
 
   .hero-text {
     width: 320px;
     text-align: left;
     margin: 0 auto;
-    padding: 10px;
   }
 
   .hello {
@@ -450,14 +449,14 @@ body {
 
   .hero h1 {
     width: 300px;
-    min-height: 45px;
+    min-height: 50px;
 
     font-size: 35px;
     white-space: nowrap;
   }
 
   .welcome {
-    font-size: 13px;
-    margin-top: 12px;
+    font-size: 14px;
+    margin-top: 2px;
   }
 }
