@@ -603,7 +603,7 @@ body {
 }
 
 /* Description */
-
+/* 
 .skill-card p {
   font-family: "Space Mono", monospace;
   font-size: 11px;
@@ -611,7 +611,7 @@ body {
   margin: 0;
 
   opacity: 0.65;
-}
+} */
 
 /* =========================
    HOVER EFFECT
@@ -637,20 +637,18 @@ body {
 @media (max-width: 768px) {
   .skills-section {
     width: 90%;
-    margin: 80px auto;
+    margin: 40px auto;
     padding: 20px 0;
   }
 
   .skills-heading {
+    text-align: left;
+    margin-left: 8px;
     margin-bottom: 40px;
   }
 
   .skills-heading h2 {
     font-size: 42px;
-  }
-
-  .skills-heading p {
-    font-size: 11px;
   }
 
   .skills-grid {
