@@ -84,7 +84,9 @@
     <section class="hero">
       <div class="hero-text">
         <p class="hello">Hi! I'm..</p>
-        <h1>Shreya Singh</h1>
+
+        <h1><span id="typing-text"></span><span class="cursor">|</span></h1>
+
         <p class="welcome">welcome to my portfolio</p>
       </div>
     </section>
@@ -102,23 +104,29 @@
 
         <div class="about-text">
           <p>
-            Hello! I'm Shreya, an aspiring full stack developer. I graduated
-            from Delhi Skill & Entrepreneurship University in 2026 with 9.18
-            cgpa in Bachelor of Computer Applications . My interest focuses on
-            mainly frontend development but I'm also intersted in backend
-            development and AI.
+            <a href="#" class="underlined underlined--reverse">
+              Hello! I'm Shreya, an aspiring full stack developer. I graduated
+              from Delhi Skill & Entrepreneurship University in 2026 with 9.18
+              cgpa in Bachelor of Computer Applications . My interest focuses on
+              mainly frontend development but I'm also intersted in backend
+              development and AI.
+            </a>
           </p>
 
           <p>
-            I enjoy exploring colour palettes, typography, and layouts to create
-            clean and engaging user experiences. I love turning ideas into
-            visually appealing, interactive websites and experimenting with new
-            design trends and technologies.
+            <a href="#" class="underlined underlined--reverse">
+              I enjoy exploring colour palettes, typography, and layouts to
+              create clean and engaging user experiences. I love turning ideas
+              into visually appealing, interactive websites and experimenting
+              with new design trends and technologies.
+            </a>
           </p>
 
           <p>
-            Outside of my practice, I enjoy reading and stitching — I like to
-            read substack, and slice of life novels.
+            <a href="#" class="underlined underlined--reverse">
+              Outside of my practice, I enjoy reading and stitching — I like to
+              read substack, and slice of life novels.
+            </a>
           </p>
 
           <a
@@ -147,5 +155,28 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script>
+      const text = "Shreya Singh";
+      const typingText = document.getElementById("typing-text");
+
+      let index = 0;
+
+      function typeEffect() {
+        if (index < text.length) {
+          typingText.textContent += text.charAt(index);
+          index++;
+
+          setTimeout(typeEffect, 150);
+        } else {
+          setTimeout(() => {
+            typingText.textContent = "";
+            index = 0;
+            typeEffect();
+          }, 1500);
+        }
+      }
+
+      typeEffect();
+    </script>
   </body>
 </html>
