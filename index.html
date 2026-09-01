@@ -249,7 +249,6 @@
             <img src="img/anaconda.png" alt="anaconda" />
           </div>
 
-          
           <div class="tool-icon">
             <img src="img/outlook.png" alt="outlook" />
           </div>
@@ -257,36 +256,106 @@
       </div>
     </section>
 
+    <!-- =========================
+     PROJECTS SECTION
+========================= -->
+
     <section class="projects-section" id="projects">
       <div class="projects-heading">
-        <h2>MY PROJECTS</h2>
+        <h2>PROJECTS</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- PROJECT 1 -->
+
+        <article class="project-card">
+          <span class="project-number">01</span>
+
+          <span class="stamp">PROJECT</span>
+
+          <div class="project-content">
+            <h3>FocusFlow</h3>
+
+            <p class="project-description">
+              A productivity dashboard that helps users manage tasks and stay
+              focused using a Pomodoro timer.
+            </p>
+
+            <div class="technologies">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>CSS</span>
+            </div>
+
+            <a href="YOUR_FOCUSFLOW_LINK" target="_blank" class="live-btn">
+              LIVE ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card">
+          <span class="project-number">02</span>
+
+          <span class="stamp">PROJECT</span>
+
+          <div class="project-content">
+            <h3>Portfolio</h3>
+
+            <p class="project-description">
+              A personal portfolio website showcasing my skills, projects,
+              experience and creative approach to web design.
+            </p>
+
+            <div class="technologies">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+
+            <a href="YOUR_PORTFOLIO_LINK" target="_blank" class="live-btn">
+              LIVE ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card">
+          <span class="project-number">03</span>
+
+          <span class="stamp">PROJECT</span>
+
+          <div class="project-content">
+            <h3>Airbnb Clone</h3>
+
+            <p class="project-description">
+              A full-stack accommodation platform inspired by Airbnb, with
+              listings, routing and database integration.
+            </p>
+
+            <div class="technologies">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+            </div>
+
+            <a href="YOUR_AIRBNB_LINK" target="_blank" class="live-btn">
+              LIVE ↗
+            </a>
+          </div>
+        </article>
+      </div>
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
     </section>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
-    <script>
-      const text = "Shreya Singh";
-      const typingText = document.getElementById("typing-text");
-
-      let index = 0;
-
-      function typeEffect() {
-        if (index < text.length) {
-          typingText.textContent += text.charAt(index);
-          index++;
-
-          setTimeout(typeEffect, 150);
-        } else {
-          setTimeout(() => {
-            typingText.textContent = "";
-            index = 0;
-            typeEffect();
-          }, 1500);
-        }
-      }
-
-      typeEffect();
-    </script>
   </body>
 </html>
