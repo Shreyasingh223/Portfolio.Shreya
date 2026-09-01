@@ -170,7 +170,7 @@ body {
   padding-top: 54px;
 }
 
-.about-content h1 {
+.about-content h2 {
   margin-bottom: 60px;
   font-family: "special elite", cursive;
   font-size: 52px;
@@ -322,11 +322,10 @@ body {
 
   .about-section {
     width: 86%;
-    margin-top: 0px;
   }
 
-  .about-content h1 {
-    font-size: 45px;
+  .about-content h2 {
+    font-size: 35px;
   }
 
   .about-text p,
@@ -334,8 +333,8 @@ body {
     font-size: 11px;
   }
 
-  footer {
-    padding-bottom: 30px;
+  .contact-link {
+    margin-bottom: 10px;
   }
 }
 
@@ -451,7 +450,7 @@ body {
     width: 300px;
     min-height: 50px;
 
-    font-size: 35px;
+    font-size: 30px;
     white-space: nowrap;
   }
 
@@ -468,7 +467,7 @@ body {
 .skills-section {
   width: 90%;
   max-width: 1200px;
-  margin: 12px auto;
+  margin: 50px auto 80px auto;
 }
 
 /* Heading */
@@ -519,8 +518,8 @@ body {
 
   padding: 25px;
 
-  border-right: 1px dashed rgba(139, 18, 53, 0.35);
-  border-bottom: 1px dashed rgba(139, 18, 53, 0.35);
+  border-right: 2px dashed rgba(139, 18, 53, 0.35);
+  border-bottom: 2px dashed rgba(139, 18, 53, 0.35);
 
   display: flex;
   flex-direction: column;
@@ -542,7 +541,7 @@ body {
 
 /* Remove bottom border from last row */
 
-.skill-card:nth-child(n + 10) {
+.skill-card:nth-child(n + 6) {
   border-bottom: none;
 }
 
@@ -556,7 +555,7 @@ body {
   font-family: "Space Mono", monospace;
   font-size: 11px;
 
-  border: 1px solid rgba(139, 18, 53, 0.4);
+  border: 2px solid rgba(139, 18, 53, 0.4);
   border-radius: 50%;
 
   width: 25px;
@@ -637,18 +636,18 @@ body {
 @media (max-width: 768px) {
   .skills-section {
     width: 90%;
-    margin: 40px auto;
-    padding: 20px 0;
+    margin: 60px auto 0 auto;
+    padding: 20px 0 0 0;
   }
 
   .skills-heading {
     text-align: left;
     margin-left: 8px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .skills-heading h2 {
-    font-size: 42px;
+    font-size: 35px;
   }
 
   .skills-grid {
@@ -659,14 +658,14 @@ body {
     min-height: 180px;
     padding: 20px 10px;
 
-    border-right: 1px dashed rgba(139, 18, 53, 0.35);
-    border-bottom: 1px dashed rgba(139, 18, 53, 0.35);
+    border-right: 2px dashed rgba(139, 18, 53, 0.35);
+    border-bottom: 2px dashed rgba(139, 18, 53, 0.35);
   }
 
   /* Every second card doesn't need right border */
 
   .skill-card:nth-child(n) {
-    border-right: 1px dashed rgba(139, 18, 53, 0.35);
+    border-right: 2px dashed rgba(139, 18, 53, 0.35);
   }
 
   .skill-card:nth-child(3n) {
@@ -675,7 +674,7 @@ body {
 
   /* Last two cards */
 
-  .skill-card:nth-child(n + 11) {
+  .skill-card:nth-child(n + 7) {
     border-bottom: none;
   }
 
@@ -702,5 +701,129 @@ body {
     height: 21px;
 
     font-size: 9px;
+  }
+}
+
+.tools-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.tools-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tools-heading h2 {
+  font-family: "special elite", cursive;
+  font-size: 52px;
+  font-weight: 500;
+  color: #7d0921;
+  line-height: 1;
+  margin: 8px 0 40px 0;
+}
+
+.tool-icons {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  padding: 20px;
+  border: 2px dashed rgba(139, 18, 53, 0.35);
+  border-radius: 20px;
+}
+
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.tool-icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .tools-section {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    padding: 20px 0;
+  }
+
+  .tools-heading {
+    text-align: left;
+    margin-left: 8px;
+    margin-bottom: 10px;
+  }
+
+  .tools-heading h2 {
+    font-size: 35px;
+    margin-bottom: 50px;
+  }
+
+  .tool-icons {
+    gap: 35px;
+    margin: 10px;
+    border: 2px dashed rgba(139, 18, 53, 0.35);
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .tool-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tool-icon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.projects-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.projects-section .projects-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects-section .projects-heading h2 {
+  font-family: "special elite", cursive;
+  font-size: 52px;
+  font-weight: 500;
+  color: #7d0921;
+  line-height: 1;
+  margin: 8px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .projects-section {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    padding: 20px 0;
+  }
+  
+  .projects-section .projects-heading {
+    text-align: left;
+    margin-left: 8px;
+    margin-bottom: 10px;
+  }
+
+  .projects-section .projects-heading h2 {
+    font-size: 35px;
+    margin-bottom: 50px;
   }
 }
