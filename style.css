@@ -484,7 +484,6 @@ body {
   margin: 8px 0 40px 0;
 }
 
-
 /* =========================
    MAIN POSTCARD
 ========================= */
@@ -839,7 +838,7 @@ body {
 
   padding: 35px;
 
-  background: rgba(255, 245, 250, 0.75);
+  background: #fff8ed;
 
   border: 1px solid rgba(139, 18, 53, 0.35);
 
@@ -1215,5 +1214,395 @@ body {
     background: #8b1235;
 
     opacity: 1;
+  }
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  padding: 100px 8% 60px;
+  position: relative;
+}
+
+/* HEADING */
+
+.contact-heading {
+  margin-bottom: 45px;
+}
+
+.contact-heading h2 {
+  font-family: "special elite", cursive;
+  font-size: 52px;
+  font-weight: 500;
+  color: #7d0921;
+  line-height: 1;
+  margin: 8px 0 40px 0;
+}
+
+.contact-heading p {
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+}
+
+/* =========================
+   POSTCARD
+========================= */
+
+.contact-postcard {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  max-width: 1100px;
+  margin: auto;
+
+  padding: 55px;
+
+  background: #fff8ed;
+
+  border: 2px solid rgba(139, 18, 53, 0.35);
+
+  box-shadow: 10px 10px 0 rgba(139, 18, 53, 0.12);
+
+  transform: rotate(-0.5deg);
+}
+
+/* INNER DASHED BORDER */
+
+.contact-postcard::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 15px;
+
+  border: 1px dashed #9b5262;
+
+  pointer-events: none;
+}
+
+/* =========================
+   CONTACT INFO
+========================= */
+
+.contact-info {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-label {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.contact-info h3 {
+  font-family: "Special Elite", cursive;
+  font-size: clamp(35px, 4vw, 52px);
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.contact-info h3 span {
+  color: #9b1e42;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.contact-info > p {
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 470px;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   CONTACT LINKS
+========================= */
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 12px;
+
+  color: #35121b;
+  text-decoration: none;
+
+  border: 1px solid transparent;
+
+  transition: 0.3s ease;
+}
+
+.contact-item:hover {
+  border-color: #35121b;
+  background: #f9dfdf;
+  transform: translateX(6px);
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #35121b;
+
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+
+  background: #f7caca;
+}
+
+.contact-item span {
+  display: block;
+
+  font-family: "Space Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  margin-bottom: 4px;
+}
+
+.contact-item strong {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form-wrapper {
+  position: relative;
+  z-index: 2;
+
+  background: #fffdf8;
+
+  padding: 35px;
+
+  border: 1px solid #35121b;
+
+  box-shadow: 5px 5px 0 rgba(139, 18, 53, 0.12);
+
+  transform: rotate(1deg);
+}
+
+/* TAPE */
+
+.form-tape {
+  position: absolute;
+
+  width: 90px;
+  height: 25px;
+
+  background: #e9b7b7;
+
+  top: -14px;
+  left: 50%;
+
+  transform: translateX(-50%) rotate(-3deg);
+
+  opacity: 0.8;
+}
+
+/* FORM GROUP */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 12px 0;
+
+  border: none;
+  border-bottom: 1px solid #35121b;
+
+  outline: none;
+
+  background: transparent;
+
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom: 2px solid #9b1e42;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9b7c82;
+}
+
+/* SEND BUTTON */
+
+.send-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 2px solid #35121b;
+
+  background: transparent;
+  color: #11121b;
+
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  background: #8b1235;
+
+  transform: translateY(-3px);
+
+  box-shadow: 4px 4px 0 #35121b;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  margin-top: 50px;
+
+  padding: 40px 8% 25px;
+
+  border-top: 2px solid #35121b;
+}
+
+.back-top {
+  color: #35121b;
+
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #35121b;
+
+  transition: 0.3s;
+}
+
+.back-top:hover {
+  color: #9b1e42;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+  padding-top: 20px;
+
+  border-top: 1px dashed #9b5262;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Space Mono", monospace;
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 70px 20px 40px;
+  }
+
+  .contact-heading {
+    margin-bottom: 35px;
+  }
+
+  .contact-heading h2 {
+    font-size: 32px;
+  }
+
+  .contact-heading p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .contact-postcard {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 35px 25px;
+
+    box-shadow: 6px 6px 0 #35121b;
+  }
+
+  .contact-postcard::before {
+    inset: 10px;
+  }
+
+  .contact-info h3 {
+    font-size: 38px;
+  }
+
+  .contact-info > p {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .contact-item strong {
+    font-size: 10px;
+    word-break: break-word;
+  }
+
+  .contact-form-wrapper {
+    padding: 28px 20px;
+
+    transform: rotate(0.5deg);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: center;
   }
 }
